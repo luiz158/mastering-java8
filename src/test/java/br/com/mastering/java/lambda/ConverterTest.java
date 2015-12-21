@@ -31,4 +31,14 @@ public class ConverterTest {
 		
 		assertEquals("10", converted);
 	}
+	
+	@Test
+	public void shouldUseConverterInterfaceUsingLambdaExpressionInAElegantWay() throws Exception {
+		Converter<String, Integer> converter = (i) -> i.toString();
+		
+		String converted = converter.convert(10);
+		
+		assertEquals("10", converted);
+	}
+	
 }

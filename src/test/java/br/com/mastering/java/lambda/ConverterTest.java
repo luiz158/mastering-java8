@@ -22,5 +22,13 @@ public class ConverterTest {
 		
 		assertEquals("10", converted);
 	}
-	
+
+	@Test
+	public void shouldUseConverterInterfaceUsingLambdaExpression() throws Exception {
+		Converter<String, Integer> converter = (Integer i) -> i.toString();
+		
+		String converted = converter.convert(10);
+		
+		assertEquals("10", converted);
+	}
 }

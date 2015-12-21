@@ -43,4 +43,16 @@ public class LambdaExpressionTest {
 		assertEquals("Gustavo", names.get(3));
 	}
 	
+	@Test
+	public void shouldSortStringsUsingLambdaExpressionInAShortWay() throws Exception {
+		List<String> names = Arrays.asList("Gama", "Bruna", "Carlos", "Gustavo");
+		
+		Collections.sort(names, (String s1, String s2) -> s1.compareTo(s2));
+		
+		assertEquals("Bruna", names.get(0));
+		assertEquals("Carlos", names.get(1));
+		assertEquals("Gama", names.get(2));
+		assertEquals("Gustavo", names.get(3));
+	}
+	
 }
